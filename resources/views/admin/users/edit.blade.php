@@ -59,18 +59,7 @@
                     @endif
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12 form-group">
-                    {!! Form::label('password', 'Password', ['class' => 'control-label']) !!}
-                    {!! Form::password('password', ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
-                    <p class="help-block"></p>
-                    @if($errors->has('password'))
-                        <p class="help-block">
-                            {{ $errors->first('password') }}
-                        </p>
-                    @endif
-                </div>
-            </div>
+            
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('role_id', 'Role*', ['class' => 'control-label']) !!}
@@ -98,7 +87,8 @@
             <div class="row">
                 <div class="col-xs-12 form-group">
                     {!! Form::label('points', 'Points*', ['class' => 'control-label']) !!}
-                    {!! Form::number('points', old('points'), ['class' => 'form-control', 'placeholder' => '', 'required' => '']) !!}
+                      {!! Form::text('points', old('points'), ['class' => 'form-control', 'placeholder' => '']) !!}
+                   
                     <p class="help-block"></p>
                     @if($errors->has('points'))
                         <p class="help-block">
